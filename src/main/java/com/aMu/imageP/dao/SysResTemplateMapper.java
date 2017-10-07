@@ -2,7 +2,11 @@ package com.aMu.imageP.dao;
 
 import com.aMu.imageP.domain.SysResTemplate;
 import com.aMu.imageP.domain.SysResTemplateExample;
+import com.aMu.imageP.domain.resultMap.SysResTemplateResultMap;
+import com.aMu.imageP.domain.search.SysResTemplateSearch;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface SysResTemplateMapper {
@@ -93,4 +97,6 @@ public interface SysResTemplateMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(SysResTemplate record);
+
+	List<SysResTemplateResultMap> getList(SysResTemplateSearch sysResTemplateSearch);
 }
